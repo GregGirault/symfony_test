@@ -6,6 +6,13 @@
     <div class="container">
         <h1 class="my-4">Taches</h1>
 
+        <!-- Add a logout link at the top of the page -->
+        {% if app.user %}
+            <div class="d-flex justify-content-end mb-3">
+                <a class="btn btn-danger" href="{{ path('app_logout') }}">Déconnexion</a>
+            </div>
+        {% endif %}
+
         <table class="table table-striped">
             <tbody>
                 <tr>
